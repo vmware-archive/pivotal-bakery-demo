@@ -7,4 +7,4 @@ target
 .gradle
 .springBeans
 .factorypath
-
+manifest.yml

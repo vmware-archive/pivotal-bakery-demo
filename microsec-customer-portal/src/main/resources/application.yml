@@ -1,4 +1,4 @@
-spring.application.name: customer-portal
+spring.application.name: pivotal-bakery-customer-portal
 
 server.port: 8082
 

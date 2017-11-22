@@ -1,4 +1,4 @@
-spring.application.name: tmf-admin-portal
+spring.application.name: pivotal-bakery-admin-portal
 
 #server.port: 8084
 

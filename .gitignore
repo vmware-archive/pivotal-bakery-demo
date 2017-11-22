@@ -8,3 +8,5 @@ target
 .springBeans
 .factorypath
 manifest.yml
+manifest.yml.pws
+manifest.yml.homelab

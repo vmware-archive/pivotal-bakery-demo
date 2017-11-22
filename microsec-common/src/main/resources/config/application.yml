@@ -1,0 +1,42 @@
+server:
+  tomcat:
+#    remote_ip_header: x-forwarded-for
+#    protocol_header: x-forwarded-proto
+#    internal_proxies: 10\.\d{1,3}\.\d{1,3}\.\d{1,3}|192\.168\.\d{1,3}\.\d{1,3}|169\.254\.\d{1,3}\.\d{1,3}|127\.\d{1,3}\.\d{1,3}\.\d{1,3}|172\.1[6-9]{1}\.\d{1,3}\.\d{1,3}|172\.2[0-9]{1}\.\d{1,3}\.\d{1,3}|172\.3[0-1]{1}\.\d{1,3}\.\d{1,3}
+#security.user.password: password
+spring.thymeleaf.cache: false
+
+targets:
+#  uaa: http://localhost:8080/uaa
+  
+branding:
+  restaurantName: Pivotal Bakery
+  menuTitle: Deserts
+  
+menuBootstrap:
+  items:
+    - name: Cupcakes
+      price: 1
+    - name: Cake Popes
+      price: 1.50
+    - name: Chocolate Brownies
+      price: 1.75
+    - name: Cheese Bread
+      price: 1.20
+    - name: Artisan French Bread
+      price: 2.50
+    - name: Asiago Cheese Focaccia
+      price: 3.75
+    - name: Cinnamon Scone
+      price: 2.25
+     
+  
+# run hystrix commands in the same thread 
+hystrix.command.default.execution.isolation.strategy: SEMAPHORE
+
+---
+
+spring:
+  profiles: cloud 
+
+security.require_ssl: true

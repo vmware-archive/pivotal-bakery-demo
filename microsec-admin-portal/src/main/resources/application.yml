@@ -1,0 +1,18 @@
+spring.application.name: tmf-admin-portal
+
+#server.port: 8084
+
+#security:
+ # basic:
+ #   enabled: false  
+
+  #oauth2:
+  #  client:
+  #    accessTokenUri: ${targets.uaa}/oauth/token
+  #    userAuthorizationUri: ${targets.uaa}/oauth/authorize
+  #    clientId: admin-portal
+  #    clientSecret: secret
+  #    scope: openid,menu.read,menu.write,order.admin
+  #  resource:
+  #    jwt.keyUri: ${targets.uaa}/token_key
+

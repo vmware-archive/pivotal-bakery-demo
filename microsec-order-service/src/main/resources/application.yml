@@ -1,0 +1,14 @@
+spring.application.name: order-service
+
+server.port: 8085
+
+security:
+  basic:
+    enabled: false
+  oauth2:
+    resource:
+      id: order
+      jwt.keyUri: ${targets.uaa}/token_key
+      userInfoUri: ${targets.uaa}/userinfo
+
+spring.jpa.hibernate.ddl-auto: update

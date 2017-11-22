@@ -1,0 +1,12 @@
+spring.application.name: menu-service
+
+server.port: 8083
+
+security:
+  basic:
+    enabled: false
+  oauth2:
+    resource:
+      jwt.keyUri: ${targets.uaa}/token_key
+
+spring.jpa.hibernate.ddl-auto: update

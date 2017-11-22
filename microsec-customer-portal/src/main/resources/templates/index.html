@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+    <title th:text="${@branding.restaurantName}">Restaurant</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" crossorigin="anonymous"/>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>		
+	</head>
+	<body>
+		<div class="jumbotron text-container">
+			<h1 th:text="|Welcome ${username} to ${@branding.restaurantName}|">Hi Jim! Welcome to Restaurant</h1>
+			<p>What do you want to do?</p>
+		</div>
+		
+		 
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<h3> MENU </h3>
+						<a href="menu.html" th:href="@{/menu/}">
+							<img src="../static/images/menu.png" th:src="@{images/menu.png}" />
+							<p>View the menu and place your order</p>
+						</a>
+					</div>
+					<div class="col-sm-4">
+						<h3> ORDERS </h3>
+						<a href="myorders.html" th:href="@{/myorders/}">
+							<img src="../static/images/orders.png" th:src="@{images/orders.png}" />
+							<p>View your orders</p>
+						</a>
+					</div>
+					<div class="col-sm-4">
+						<h3> ACCESS TOKEN </h3>
+						<a href="/dump_token">
+							<img src="../static/images/access.png" th:src="@{images/access.png}" />
+							<p>View your access token</p>
+						</a>
+					</div>
+				</div>
+		 	</div>			
+					<!--
+					
+					
+						
+					</div>
+				</div>
+				
+			</div>
+			 -->
+	</body>
+</html>

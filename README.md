@@ -1,4 +1,4 @@
-# Pivotal Bakery
+# Pivotal Bakery - a 're-skin' of Will Tran's Freddy BBQ Demo
 
 ## Overview
 
@@ -10,9 +10,14 @@ This is the use case:
 - Give Owner the ability to manage the menu and close orders
 
 
+## Building the Demo
+
+Note: using maven to package with "mvn package -DskipTests" as local test harness removed from project.
+ 
+
 ## Deploy to Cloud Foundry
 
-
+Rename manifest.yml.template to manifest.yml - modify TRUST_CERTS if using self-signed certs for SCS, and CF push (ensuring sso, mysql, circuit-breaker, serivce-registry & config-server services are available)
 
 1. Install dependent Services
 2. Create service instances for microservices to bind to

@@ -14,7 +14,11 @@ This is the use case:
 ## Building the Demo
 
 Note: using maven to package with "mvn package -DskipTests" as local test harness removed from project.
- 
+
+
+## Known Issues
+
+Single sign-out not yet implemented so best to open two different browsers on a single host to allow concurrent sessions as a 'customer' and as an 'employee' user on customer and admin portals respectively.
 
 ## Deploy to Cloud Foundry
 
@@ -74,13 +78,10 @@ service-registry  p-service-registry            standard   create succeeded
 sso               p-identity                    auth       create succeeded
 ```
 
-### Set CF_TARGET
+### Set TRUST_CERTS
 
-If your PCF environment is deployed with self-signed certificates to enable TLS for application domains then you must set TRUST_CERTS environment variable for deployed microservices to the API endpoint for PCF. Run the following command as a Cloud Foundry Administrator to set TRUST_CERTS to the API endpoint for all applications deployed into PCF environment:
+If your PCF environment is deployed with self-signed certificates to enable TLS for application domains then you must set TRUST_CERTS environment variable for deployed microservices to the API endpoint for PCF. 
 
-```
-cf srevg '{"TRUST_CERTS":"https://api.mypcf.example.com"}'
-```
 ### Deploy Applications
 
 The file `manifest.yml` contains the configuration for all of the application instances to be deployed for Pivotal Bakery. In order to deploy the applications to PCF run the following command from the folder containing `manifest.yml`:
